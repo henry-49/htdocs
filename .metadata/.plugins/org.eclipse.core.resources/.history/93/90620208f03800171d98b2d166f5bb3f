@@ -1,0 +1,63 @@
+<?php 
+class Links_Social_Widget extends WP_Widget {
+	
+	/**
+	 * Sets up the widgets name etc
+	 */
+	public function __construct() {
+		parent::__construct(
+				'links_social_widget', // Base ID
+				__( 'Link Social Widget', 'ls_domain' ), // Name
+				array( 'description' =>__( 'Outputs social icons linked to profile', 'ls_domain' )) // Args
+				);
+	}
+	
+	/**
+	 * Outputs the content of the widget
+	 *
+	 * @param array $args
+	 * @param array $instance
+	 */
+	public function widget( $args, $instance ) {
+		// outputs the content of the widget
+		//Call Form Function
+		$this->getForm();
+		
+	}
+	
+	/**
+	 * Outputs the options form on admin
+	 *
+	 * @param array $instance The widget options
+	 */
+	public function form( $instance ) {
+		// outputs the options form on admin
+		?>
+		
+		TEST BACKEND FORM
+		<?php 
+	}
+	
+	/**
+	 * Processing widget options on save
+	 *
+	 * @param array $new_instance The new options
+	 * @param array $old_instance The previous options
+	 */
+	public function update( $new_instance, $old_instance ) {
+		// processes widget options to be saved
+	}
+	
+	/**
+	 * Gets and Displays Form
+	 *
+	 * @param array $args
+	 * @param array $instance
+	 */
+	public function getForm( $args, $instance ) {
+		// outputs the content of the widget
+		//call form funtion
+		$this->getForm();
+		
+	}
+}

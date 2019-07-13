@@ -1,0 +1,130 @@
+<?php 
+class Links_Social_Widget extends WP_Widget {
+	
+	/**
+	 * Sets up the widgets name etc
+	 */
+	public function __construct() {
+		parent::__construct(
+				'links_social_widget', // Base ID
+				__( 'Link Social Widget', 'ls_domain' ), // Name
+				array( 'description' =>__( 'Outputs social icons linked to profile', 'ls_domain' )) // Args
+				);
+	}
+	
+	/**
+	 * Outputs the content of the widget
+	 *
+	 * @param array $args
+	 * @param array $instance
+	 */
+	public function widget( $args, $instance ) {
+		// outputs the content of the widget
+		
+		
+	}
+	
+	/**
+	 * Outputs the options form on admin
+	 *
+	 * @param array $instance The widget options
+	 */
+	public function form( $instance ) {
+		// outputs the options form on admin
+		//Call Form Function
+		$this->getForm($instance);
+		
+	}
+	
+	/**
+	 * Processing widget options on save
+	 *
+	 * @param array $new_instance The new options
+	 * @param array $old_instance The previous options
+	 */
+	public function update( $new_instance, $old_instance ) {
+		// processes widget options to be saved
+	}
+	
+	/**
+	 * Gets and Displays Form
+	 *
+	 * @param array $instance the widget options
+	 */
+	public function getForm( $instance ) {
+		// outputs the content of the widget
+		// Gets Facebook Link
+		if(isset($instance['facebook_link'])){
+			$facebook_link = esc_attr($instance['facebook_link']);
+		}else{
+			$facebook_link = 'http://www.facebook.com';
+		}
+		
+		// Gets Twitter Link
+		if(isset($instance['twitter_link'])){
+			$twitter_link = esc_attr($instance['twitter_link']);
+		}else{
+			$twitter_link = 'http://www.twitter.com';
+		}
+		
+		// Gets Linkedin Link
+		if(isset($instance['linkedin_link'])){
+			$linkedin_link = esc_attr($instance['linkedin_link']);
+		}else{
+			$linkedin_link = 'http://www.linkedin.com';
+		}
+		
+		// Gets Google Link
+		if(isset($instance['google_link'])){
+			$google_link = esc_attr($instance['google_link']);
+		}else{
+			$google_link = 'http://plus.google.com';
+		}
+		
+		
+		//ICON
+		
+		// Gets Facebook Icon
+		if(isset($instance['facebook_icon'])){
+			$facebook_icon = esc_attr($instance['facebook_icon']);
+		}else{
+			$facebook_icon = plugins_url() . 'links-social/img/facebook.png';
+		}
+		
+		// Gets Twitter Icon
+		if(isset($instance['twitter_icon'])){
+			$twitter_icon = esc_attr($instance['twitter_icon']);
+		}else{
+			$twitter_icon = plugins_url() . 'links-social/img/twitter.png';
+		}
+		
+		// Gets Linkedin Icon
+		if(isset($instance['linkedin_icon'])){
+			$linkedin_icon = esc_attr($instance['linkedin_icon']);
+		}else{
+			$linkedin_icon = plugins_url() . 'links-social/img/linkedin.png';
+		}
+		
+		// Gets Google Icon
+		if(isset($instance['google_icon'])){
+			$google_icon = esc_attr($instance['google_icon']);
+		}else{
+			$google_icon = plugins_url() . 'links-social/img/google.png';
+		}
+		
+		
+		//Get Icon Size
+		if(isset($instance['icon_width'])){
+			$icon_width = esc_attr($instance['icon_width']);
+		}else{
+			$icon_width = 32;
+		}
+		?>
+			<p>
+				<label for="<?php echo $this->get_field_id('facebook_link');?>"><?php _e('Facebook Link');?></label>
+				<input class="widefat" id="<?php ?>"
+			</p>
+		<?php 
+		
+	}
+}

@@ -1,0 +1,13 @@
+{
+    "name": "henry/composer",
+    "description": "I am learning composer",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Henry Nwadiogor",
+            "email": "henrynwdiogor@gmail.com"
+        }
+    ],
+    "require": {}
+}

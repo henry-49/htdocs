@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, intial scale =1">
+    <title>Bootsrap Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <style>
+        .jumbotron{
+            background-color:#2E2D88;
+            color: white;
+        }
+    /* Adds border for tabs */
+        .tab-content{
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        .nav-tabs{
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="wall hidden-sm hidden-md hidden-lg">
+           <p>Screen &lt; 768px</p>
+        </div>
+        <div class="wall hidden-md hidden-lg">
+           <p>Screen &gt;= 768px and &lt; 992px</p>
+        </div>
+        <div class="wall hidden-lg">
+           <p>Screen &gt;=992px and &lt; 1200px</p>
+        </div>
+        <div class="wall">
+           <p>Screen &gt; 1200px</p>
+        </div>
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;mywordpress/wp-content/plugins/city-weather-report/includes/city-weather-report-scripts.phph&apos; to &apos;city-weather-report-scripts.php&apos;" description="Rename resource &apos;city-weather-report-scripts.phph&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="wp-content/plugins/city-weather-report/includes/city-weather-report-scripts.phph" name="city-weather-report-scripts.php" stamp="1495275841952" updateReferences="true"/>
+</session>
